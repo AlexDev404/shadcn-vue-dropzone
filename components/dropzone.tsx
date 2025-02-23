@@ -522,10 +522,6 @@ interface DropZoneFileListProps
 
 const DropzoneFileList = forwardRef<HTMLOListElement, DropZoneFileListProps>(
   (props, ref) => {
-    const context = useDropzoneContext();
-    if (!context) {
-      throw new Error("DropzoneFileList must be used within a Dropzone");
-    }
     return (
       <ol
         ref={ref}
