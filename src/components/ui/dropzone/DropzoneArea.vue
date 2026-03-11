@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { inject, computed } from 'vue'
-import { cn } from '@/lib/utils'
-import { DropzoneContextKey } from './useDropzoneUpload'
+import { cn } from '@/lib/utils';
+import { computed, inject } from 'vue';
+import { DropzoneContextKey } from './useDropzoneUpload';
 
 const props = defineProps<{
   class?: string
