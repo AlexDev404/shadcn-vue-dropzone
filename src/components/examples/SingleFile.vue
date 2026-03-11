@@ -39,15 +39,13 @@ const hasAvatar = computed(() => !!dropzone.fileStatuses.value[0]?.result)
       </div>
       <DropzoneArea>
         <DropzoneTrigger class="flex gap-8 bg-transparent text-sm">
-          <Avatar :class="cn(isPending && 'animate-pulse')">
+          <Avatar :class="cn(isPending && 'animate-pulse', 'size-10')">
             <AvatarImage v-if="hasAvatar" class="object-cover" :src="avatarSrc" />
             <AvatarFallback>JG</AvatarFallback>
           </Avatar>
           <div class="flex flex-col gap-1 font-semibold">
             <p>Upload a new avatar</p>
-            <p class="text-xs text-muted-foreground">
-              Please select an image smaller than 10MB
-            </p>
+            <p class="text-xs text-muted-foreground">Please select an image smaller than 10MB</p>
           </div>
         </DropzoneTrigger>
       </DropzoneArea>
